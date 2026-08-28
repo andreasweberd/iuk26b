@@ -1,6 +1,7 @@
 # Kommentar
 def essen(snack):
     print(f'Auf dem Schulweg esse ich : {snack}')
+    print("lol, ich habe Hunger und esse mein Käsebrot auf dem Schulweg.")
 
 
 # Kommentar
