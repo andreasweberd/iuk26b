@@ -1,3 +1,13 @@
+def preis_identifizieren(artikel):
+    preise = {
+        "Käsebrot": 2.5,
+        "Wurstbrot": 3.0,
+        "Salat": 4.0,
+        "Getränk": 1.5
+    }
+    return preise.get(artikel, "Artikel nicht gefunden")
+
+
 def kaufen(artikel, preis, anzahl):
     kosten = preis * anzahl
     print(f"Ich kaufe {anzahl} {artikel} für insgesamt {kosten} Euro.")
@@ -15,8 +25,9 @@ def rueckgeldGeben(preis, gegeben):
 
 if __name__ == "__main__":
     artikel = "Käsebrot"
-    preis = 2.5
     anzahl = 3
     gegeben = 3
+
+    preis = preis_identifizieren(artikel)
     kosten = kaufen(artikel, preis, anzahl)
     rueckgeldGeben(kosten, gegeben)
