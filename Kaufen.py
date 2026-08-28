@@ -1,9 +1,9 @@
+def kaufen(artikel, preis, anzahl):
+    kosten = preis * anzahl
+    print("Ich kaufe " + str(anzahl) + "x" + str(artikel) + " für insgesamt " + str(kosten) + " Euro.")
 
-def kaufen (artikel, preis, anzahl):
-    print(f"Ich Kaufe (anzahl) (artikel) für insgesamt (preis) Euro")
-    anzahl = 3
-    artikel = Schokolade
-    preis = 4.5
-
-if __name__== "__main__":
-    kaufen
+if __name__ == '__main__':
+    Artikelname = "Schokolade"
+    Preis = 1.5
+    Anzahl = 3
+    kaufen(Artikelname, Preis, Anzahl)
