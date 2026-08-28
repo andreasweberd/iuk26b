@@ -1,11 +1,14 @@
-def kaufen(artikel, preis, anzahl):
-    return f"Ich kaufe {anzahl} {artikel} für insgesamt {preis * anzahl} Euro."
+def main():
+
+    def kaufen(artikel, preis, anzahl):
+        kosten = float(preis * anzahl)
+        return f"Ich kaufe {anzahl}x {artikel} für {kosten} Euro"
+
+
+    print(kaufen("Schokolade", 1.50, 3))
 
 
 if __name__ == "__main__":
-    artikel = "Käsebrot"
-    preis = 2.5
-    anzahl = 3
+    main()
 
-    ausgabe = kaufen(artikel, preis, anzahl)
-    print(ausgabe)
+
