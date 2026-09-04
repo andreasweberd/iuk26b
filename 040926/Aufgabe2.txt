@@ -1,0 +1,43 @@
+git Das Szenario
+
+Jeden Morgen läuft dein Start in den Tag ähnlich ab. Um nicht den Überblick zu verlieren, teilst du deinen Morgen in zwei feste Schritte ein:
+
+    Den Rucksack packen (welches Fach hast du und was nimmst du als Snack mit?)
+    Den Schulweg zurücklegen (wie weit ist es und wie lange brauchst du zu Fuß?)
+
+Deine Aufgabe ist es, diesen Ablauf in Python mit zwei separaten Funktionen zu programmieren.
+
+Deine Aufgaben:
+
+1. Erstelle die erste Funktion: packe_rucksack
+
+    Die Funktion benötigt zwei Parameter: fach (Text) und snack (Text).
+
+    Sie soll folgenden Text auf der Konsole ausgeben:
+    Plaintext
+
+    🎒 Rucksack wird gepackt...
+     -> Buch für LF5 eingesteckt.
+     -> Apfel als Pausebrot eingepackt.
+
+2. Erstelle die zweite Funktion: gehe_weg
+
+    Die Funktion benötigt zwei Parameter: strecke_km (Kommazahl) und geschwindigkeit_kmh (Kommazahl).
+
+    Berechne in der Funktion die Dauer in Minuten mit der Formel:
+
+    dauer = (strecke_km / geschwindigkeit_kmh) * 60
+
+    Sie soll folgenden Text auf der Konsole ausgeben:
+    Plaintext
+
+    🚶 Schulweg wird angetreten...
+     -> Für 2.5 km benötigst du 30.0 Minuten.
+
+3. Schreibe das Hauptprogramm (Einsprungpunkt)
+
+    Nutze den Einsprungpunkt if __name__ == "__main__":.
+
+    Lege dort passende Variablen für dein Fach, deinen Snack, die Strecke und deine Geschwindigkeit an.
+
+    Rufe erst packe_rucksack(...) und danach gehe_weg(...) mit deinen Variablen auf.
