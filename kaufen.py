@@ -6,7 +6,10 @@ def main():
 
     print (kaufen("Schokolade", 1.5, 3))
 
+def rueckgeldGeben(kosten, gegeben):
+    rueckgeld=float (gegeben - kosten)
+    print (f"Hier dein Geld {rueckgeld}")
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
