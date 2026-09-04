@@ -2,7 +2,7 @@ def packe_rucksack(fach, snack):
     print(f"\nRucksack wird gepackt...\n-> Buch wird für {fach} eingepackt,\n-> {snack} als Pausenbrot eingepackt")
 
 def gehe_weg(strecke_km, geschwindigkeit_kmh):
-    dauer = strecke_km / geschwindigkeit_kmh * 60
+    dauer = round(strecke_km / geschwindigkeit_kmh * 60, 2)
     print(f"\nSchulweg wird angetreten...\n-> Für {strecke_km} km benötigst du {dauer} Minuten")
 
 if "__main__" == __name__:

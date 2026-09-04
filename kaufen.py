@@ -2,9 +2,9 @@ def kaufen(artikel, preis, anzahl):
     kosten = preis * anzahl
     return kosten
 
-def rueckgeldGeben(preis, gegeben):
-    rueckgeld = gegeben - preis
-    return rueckgeld
+    def rueckgeldGeben(preis, gegeben):
+        rueckgeld = gegeben - preis
+        return rueckgeld
 
 if __name__ == '__main__':
 
