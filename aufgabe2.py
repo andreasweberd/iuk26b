@@ -14,5 +14,8 @@ if __name__ == "__main__":
     fach = "LF01"
     snack = "Käsebrot"
 
+    strecke = 2.5
+    geschwindigkeit = 4
+
     packe_rucksack(fach, snack)
-    gehe_weg(2.5, 4)
+    gehe_weg(strecke, geschwindigkeit)
