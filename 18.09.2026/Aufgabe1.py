@@ -12,13 +12,26 @@ def berechnen_bild (breite, hoehe, farbtiefe):
     bite = breite * hoehe * farbtiefe 
     bytes = bite / 8
     kibibyte = bytes / 1024
-    mebibyte = kibibyte / 1024
-    return mebibyte
+    mebibyte_bild = kibibyte / 1024
+    return mebibyte_bild
+
+def berechne_audio (abtastrate, bittiefe, kaneale, zeit):
+    abtastrate = 44100
+    bittiefe = 16
+    kaneale = 2
+    zeit = 10
+    bite = abtastrate * bittiefe * kaneale * zeit
+    bytes = bite / 8
+    kibibyte = bytes / 1024
+    mebibyte_audio = kibibyte / 1024
+    return mebibyte_audio
 
 if __name__ == "__main__":
     Ergebnis = berechnen_bild(1025, 680, 16)
     bildgroesse = Ergebnis 
     print (f"Die berechnete Bildgröße beträgt {bildgroesse} MB.")
 
-
-
+    
+    audiogroesse = berechne_audio(44100, 16, 2, 10) 
+    print (f"Die berechnete Audiogöße beträgt {audiogroesse} MB.")
+    
