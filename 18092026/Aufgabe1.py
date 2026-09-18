@@ -1,9 +1,9 @@
 def main():
 
     def berechne_bildbreite(breite:int, hoehe:int ,farbtiefe:int):
-            # Die 8.388.608 entsteht durch die Multiplikation von 8 und 1024^2
-            # Die Größe wird somit direkt in MiB berechnet
-            return (breite * hoehe * farbtiefe)  / 8388608
+        # Die 8.388.608 entsteht durch die Multiplikation von 8 und 1024^2
+        # Die Größe wird somit direkt in MiB berechnet
+        return (breite * hoehe * farbtiefe)  / 8388608
 
     def berechne_audio(abtastrate, bittiefe:int, kanaele, zeit):
         # Die 8.388.608 entsteht durch die Multiplikation von 8 und 1024^2
