@@ -9,18 +9,6 @@ def berechne_audio_bits(abtastrate, bit_tiefe, kanal_anzahl, zeit_in_sekunden):
     return abtastrate * bit_tiefe * kanal_anzahl * zeit_in_sekunden
 
 
-def bits_to_bytes(bits):
-    return bits / 8
-
-
-def bits_to_kibibytes(bits):
-    return bits_to_bytes(bits) / 1024
-
-
-def bits_to_mebibytes(bits):
-    return bits_to_kibibytes(bits) / 1024
-
-
 if __name__ == "__main__":
     breite = 1025
     hoehe = 680
