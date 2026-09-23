@@ -39,11 +39,11 @@ if __name__ == "__main__":
     audio_bits = bc.BitConverter("bits", audio_bits)
     print(f'Die Bildgröße beträgt: {bildgroesse.get_bits()} Bits.')
     print(
-        f'oder {bits_to_bytes(bildgroesse.get_bytes())} Bytes.')
+        f'oder {bildgroesse.get_bytes()} Bytes.')
     print(
-        f'oder {bits_to_kibibytes(bildgroesse.get_kibibytes())} KiB.')
+        f'oder {bildgroesse.get_kibibytes()} KiB.')
     print(
-        f'oder {bits_to_mebibytes(bildgroesse.get_mebibytes())} MiB.')
+        f'oder {bildgroesse.get_mebibytes()} MiB.')
 
     print(f'Die Audiogröße beträgt: {audio_bits.get_bits()} Bits')
 
