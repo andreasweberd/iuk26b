@@ -1,5 +1,5 @@
 def berechne_verbrauch(strecke_km, liter):
-    return round(liter / gefahrene_km * 100, 2)
+    return round(liter / strecke_km * 100, 2)
 
 if __name__ == "__main__":
     gefahrene_km = float(input("Gib die gefahrenen km an (z.B.: 148.4): "))
