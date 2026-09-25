@@ -22,6 +22,11 @@ def main():
     else:
         print("normaler Verbrauch o7")
 
+    if (gesamtkosten > 50):
+        print("Zu teuer geh bahn fahren du penner")
+    else:
+        print("passt vom preis supa")
+
 
 if __name__ == '__main__':
     main()
