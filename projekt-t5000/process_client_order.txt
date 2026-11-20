@@ -1,0 +1,53 @@
+# Trinkmeister5000 - Steuerungslogik
+# Teil B: Implementierung in Python
+
+# Lagerbestand: Produktnummer -> Anzahl im Schacht
+inventory = {1: 5, 2: 0, 3: 10}
+
+# Preise: Produktnummer -> Preis in Euro
+prices = {1: 1.50, 2: 2.00, 3: 1.20}
+
+# Muenzen, die der Automat annimmt
+ERLAUBTE_MUENZEN = [0.10, 0.20, 0.50, 1.00, 2.00]
+
+
+def process_client_order(product_id):
+    # 1. Produktwahl pruefen
+    if product_id < 1 or product_id > 50 or product_id not in inventory:
+        print("Fehler: ungueltige Produktnummer")
+        return
+    if inventory[product_id] <= 0:
+        print("Fehler: Schacht leer")
+        return
+
+    # 2. Preis anzeigen
+    preis = prices[product_id]
+    print(f"Preis: {preis:.2f} EUR")
+
+    # 3. Geldeinwurf, bis der Betrag erreicht ist
+    einwurf = 0.0
+    while einwurf < preis:
+        eingabe = input("Muenze einwerfen (oder a fuer Abbruch): ")
+        if eingabe == "a":
+            print(f"Abbruch: {einwurf:.2f} EUR zurueck")
+            return
+        muenze = float(eingabe.replace(",", "."))
+        if muenze in ERLAUBTE_MUENZEN:
+            einwurf = round(einwurf + muenze, 2)
+            print(f"Eingeworfen: {einwurf:.2f} EUR")
+        else:
+            print("Muenze wird nicht angenommen")
+
+    # 4. Ware und Wechselgeld ausgeben
+    wechselgeld = round(einwurf - preis, 2)
+    print("Produkt wird ausgegeben")
+    if wechselgeld > 0:
+        print(f"Wechselgeld: {wechselgeld:.2f} EUR")
+
+    # 5. Lagerbestand um 1 verringern
+    inventory[product_id] = inventory[product_id] - 1
+
+
+if __name__ == "__main__":
+    nummer = int(input("Produktnummer (01-50): "))
+    process_client_order(nummer)

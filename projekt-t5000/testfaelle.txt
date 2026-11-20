@@ -1,0 +1,14 @@
+Trinkmeister5000 - Teil C: Testfaelle
+
+Testdaten:  Produkt 1 = 1,50 EUR, Bestand 5
+            Produkt 2 = 2,00 EUR, Bestand 0 (Schacht leer)
+            Produkt 3 = 1,20 EUR, Bestand 10
+
+Szenario-ID | Beschreibung                          | Eingabe(n)                      | Erwartetes Ergebnis
+------------+---------------------------------------+---------------------------------+---------------------------------------------------------------
+T01         | Happy Path: passendes Geld            | Produkt 1, Muenzen 1,00 + 0,50  | Produkt wird ausgegeben, kein Wechselgeld, Bestand 5 -> 4
+T02         | Rueckgeld: Ueberzahlung               | Produkt 3, Muenze 2,00          | Produkt wird ausgegeben, Wechselgeld 0,80 EUR, Bestand 10 -> 9
+T03         | Fehler: Schacht leer                  | Produkt 2                       | "Fehler: Schacht leer", kein Geldeinwurf, Bestand bleibt 0
+T04         | Fehler: Abbruch durch Kunden          | Produkt 1, Muenze 1,00, Abbruch | 1,00 EUR wird zurueckgegeben, kein Produkt, Bestand bleibt 5
+T05         | Fehler: ungueltige Produktnummer      | Produkt 51                      | "Fehler: ungueltige Produktnummer", Rueckkehr zur Eingabe
+T06         | Ungueltige Muenze                     | Produkt 1, Muenzen 0,05 + 2,00  | 0,05 wird nicht angenommen, Produkt + 0,50 EUR Wechselgeld
